@@ -13,8 +13,8 @@
     "LICENSE",
     "README.md"
   ],
-  "dependencies": {
-    "quill": "^1.3.7"
+  "peerDependencies": {
+    "quill": "^1.3.6"
   },
   "devDependencies": {
     "@ava/babel": "^2.0.0",
@@ -33,7 +33,8 @@
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "serve": "^12.0.1"
+    "serve": "^12.0.1",
+    "@types/quill": "latest"
   },
   "scripts": {
     "start": "concurrently \"rollup -c -w\" \"serve docs\"",

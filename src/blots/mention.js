@@ -89,6 +89,6 @@ MentionBlot.blotName = "mention";
 MentionBlot.tagName = "span";
 MentionBlot.className = "mention";
 
-export function setup(Quill) {
+export function setupBlot(Quill) {
   Quill.register(MentionBlot);
 }

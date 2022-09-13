@@ -36,7 +36,7 @@ class MentionBlot extends Embed {
 
   attach() {
     super.attach();
-  
+
     if (!this.mounted) {
       this.mounted = true;
       this.clickHandler = this.getClickHandler();
@@ -89,4 +89,6 @@ MentionBlot.blotName = "mention";
 MentionBlot.tagName = "span";
 MentionBlot.className = "mention";
 
-Quill.register(MentionBlot);
+export function setup(Quill) {
+  Quill.register(MentionBlot);
+}

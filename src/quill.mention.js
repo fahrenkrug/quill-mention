@@ -7,7 +7,7 @@ import {
   hasValidMentionCharIndex
 } from "./utils";
 import "./quill.mention.css";
-import "./blots/mention";
+import {setupBlot } from "./blots/mention";
 
 class Mention {
   constructor(quill, options) {
@@ -748,10 +748,9 @@ class Mention {
   }
 }
 
-// export function setup(Quill) {
-//   Quill.register("modules/mention", Mention);
-// }
-
-Quill.register("modules/mention", Mention);
+export function setup(Quill) {
+  setupBlot(Quill)
+  Quill.register("modules/mention", Mention);
+}
 
 export default Mention;
